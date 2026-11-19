@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="gu"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#4f46e5"><link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes">
+<title>Seth H H Sirolawala High School</title>
+<style>
+:root{--p:#4f46e5;--pl:#eef2ff;--bg:#f4f6fb;--c:#fff;--t:#1e293b;--m:#64748b;--b:#e2e8f0}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Roboto,Arial,sans-serif}
+body{background:#cbd5e1;display:flex;justify-content:center;min-height:100vh}
+.app{width:100%;max-width:430px;background:var(--bg);min-height:100vh;display:flex;flex-direction:column;position:relative}
+.hd{background:var(--c);padding:12px 16px;border-bottom:1px solid var(--b);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20}
+.badge{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#4f46e5,#0ea5e9);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.row{display:flex;align-items:center;gap:10px}.sn{font-size:13px;font-weight:700}
+.chip{font-size:11px;background:var(--pl);color:var(--p);padding:4px 8px;border-radius:12px;font-weight:600;cursor:pointer}
+.content{flex:1;padding:14px;padding-bottom:85px}
+.auth{flex:1;display:flex;flex-direction:column;justify-content:center;padding:24px 18px}
+.card{background:var(--c);border-radius:16px;padding:14px;margin-bottom:14px;box-shadow:0 2px 10px rgba(15,23,42,.05)}
+.auth .card{padding:24px 18px}
+h1{font-size:18px;margin-bottom:4px}.sub{font-size:12px;color:var(--m);margin-bottom:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.role{background:var(--pl);border:2px solid transparent;border-radius:16px;padding:20px 10px;text-align:center;cursor:pointer}
+.role:active{border-color:var(--p)}.role b{display:block;font-size:34px;margin-bottom:6px}
+.fg{margin-bottom:12px}.fg label{display:block;font-size:12px;font-weight:600;margin-bottom:5px}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--b);border-radius:10px;font-size:14px;background:#f8fafc;outline:none}
+.btn{width:100%;padding:12px;background:var(--p);color:#fff;border:0;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer}
+.back{background:none;border:0;color:var(--m);font-size:13px;margin-bottom:10px;cursor:pointer}
+.st{font-size:15px;font-weight:700;margin-bottom:4px;display:flex;justify-content:space-between}
+.ti{display:flex;gap:10px;margin-bottom:12px}
+.tb{width:64px;background:#f1f5f9;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+.tb span{font-size:10px;color:var(--m)}
+.sc{flex:1;border-radius:14px;padding:12px}
+.s0{background:#e0f2fe;border-left:4px solid #0284c7}.s1{background:#dcfce7;border-left:4px solid #16a34a}.s2{background:#f3e8ff;border-left:4px solid #9333ea}
+.sh{display:flex;justify-content:space-between;font-weight:700;font-size:14px}.sh small{font-size:11px}
+.meta{font-size:11px;color:#475569;margin:4px 0 8px}
+.bs{padding:6px 12px;border-radius:8px;font-size:12px;font-weight:600;border:0;background:var(--t);color:#fff;cursor:pointer}
+.plus{background:var(--p);color:#fff;width:28px;height:28px;border-radius:50%;border:0;font-size:18px;margin-left:8px;cursor:pointer}
+.qb{background:#f8fafc;border:1px solid var(--b);border-radius:14px;padding:14px 8px;text-align:center;cursor:pointer;font-size:13px;font-weight:700}
+.qb b{display:block;font-size:26px}.qb small{display:block;font-weight:400;color:var(--m);font-size:11px}
+.note{background:#f8fafc;padding:10px;border-radius:10px;margin-top:8px;border-left:3px solid var(--p)}
+.note h4{font-size:13px}.note p{font-size:12px;margin-top:4px;white-space:pre-line;color:#334155}.note small{font-size:10px;color:var(--m)}
+.pod{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:8px;align-items:end;margin:14px 0;text-align:center}
+.pb{background:#f8fafc;border:1px solid var(--b);border-radius:14px;padding:12px 4px;font-size:12px;font-weight:700}
+.pb.g{background:linear-gradient(#fef9c3,#fff);border-color:#eab308;padding-top:18px}.pb i{display:block;font-style:normal;font-size:20px}.pb em{display:block;font-style:normal;color:var(--p);font-size:11px}
+.rr{display:flex;justify-content:space-between;padding:10px 12px;background:#f8fafc;border-radius:12px;margin-bottom:8px;font-size:13px}
+.rr.me{background:var(--pl);border:1px solid var(--p);font-weight:700}
+.focus{display:flex;justify-content:space-between;align-items:center;background:#f8fafc;padding:12px;border-radius:12px;border:1px solid var(--b);margin-bottom:12px}
+.sw{position:relative;width:46px;height:24px}.sw input{opacity:0;width:0;height:0}
+.sl{position:absolute;inset:0;background:#cbd5e1;border-radius:24px;transition:.3s;cursor:pointer}
+.sl:before{content:"";position:absolute;height:18px;width:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s}
+input:checked+.sl{background:var(--p)}input:checked+.sl:before{transform:translateX(22px)}
+.fr{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--b);font-size:13px}
+.av{width:38px;height:38px;border-radius:50%;background:#e2e8f0;font-weight:700;display:flex;align-items:center;justify-content:center}
+.nav{position:fixed;bottom:0;width:100%;max-width:430px;background:var(--c);border-top:1px solid var(--b);display:grid;grid-template-columns:repeat(3,1fr);padding:8px 0;z-index:30}
+.nb{background:none;border:0;color:var(--m);font-size:11px;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer}
+.nb.on{color:var(--p)}.nb b{font-size:20px}
+.ov{position:fixed;inset:0;background:rgba(15,23,42,.55);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+.mb{background:var(--c);width:100%;max-width:390px;border-radius:18px;padding:18px;max-height:85vh;overflow-y:auto}
+.qo{width:100%;text-align:left;padding:10px 12px;margin-bottom:8px;border:1px solid var(--b);border-radius:10px;background:#f8fafc;font-size:13px;cursor:pointer}
+.hidden{display:none!important}
+</style></head><body>
+<div class="app">
+<header class="hd hidden" id="hd"><div class="row"><div class="badge">SH</div><div><div class="sn">Seth H H Sirolawala High School</div><div style="font-size:10px;color:var(--m)">Midnight Auto-Reset Active</div></div></div><div class="chip" id="ub" onclick="logout()"></div></header>
+
+<div class="auth" id="roleS"><div class="card"><div style="text-align:center;margin-bottom:20px"><div class="badge" style="margin:0 auto 10px;width:48px;height:48px;font-size:18px">SH</div><h1>Seth H H Sirolawala High School</h1><p class="sub">Smart Classroom & Daily Revision Portal</p></div>
+<div class="grid"><div class="role" onclick="openLogin('sir')"><b>👨‍🏫</b><strong>Sir (Teacher)</strong><div class="sub">MCQ & Notes અપલોડ કરો</div></div>
+<div class="role" onclick="openLogin('student')"><b>👨‍🎓</b><strong>Student</strong><div class="sub">Daily Test & Notes જુઓ</div></div></div></div></div>
+
+<div class="auth hidden" id="loginS"><div class="card"><button class="back" onclick="backRoles()">← પાછા જાઓ</button><h1 id="ft">Login</h1><p class="sub">તમારી વિગતો ભરો</p>
+<div class="fg"><label>પૂરું નામ</label><input id="iN" placeholder="તમારું નામ લખો..."></div>
+<div class="fg" id="subG"><label>તમારો વિષય</label><select id="iS"><option>Physics</option><option>Biology / Maths</option><option>Chemistry</option></select></div>
+<div class="fg"><label>તાલુકો</label><input id="iT" placeholder="દા.ત. Bodeli"></div>
+<div class="fg"><label>જિલ્લો</label><input id="iD" placeholder="દા.ત. Chhota Udepur"></div>
+<button class="btn" onclick="doLogin()">આગળ વધો →</button></div></div>
+
+<main class="content hidden" id="main">
+<section id="tHome">
+<div class="card"><div class="st"><span>📅 આજનું પુનરાવર્તન</span><span style="font-size:11px;color:var(--p)" id="dt"></span></div><div class="sub">રાત્રે 12:00 વાગ્યે પ્રશ્નો અને સ્કોર રીસેટ થશે</div><div id="tests"></div></div>
+<div class="card"><div class="st">⚡ Quick Actions</div><div class="sub">ક્લાસ કમ્યુનિટી અને રેન્ક</div><div class="grid">
+<div class="qb" onclick="show('comm')"><b>👥</b>Community<small>Focus Mode & Friends</small></div>
+<div class="qb" onclick="tab('lb')"><b>🏆</b>Today's Rank<small>લાઈવ સ્કોર જુઓ</small></div></div></div></section>
+
+<section id="tComm" class="hidden"><div class="card"><button class="back" onclick="tab('home')">← Home</button>
+<div class="focus"><div><strong style="font-size:14px">Focus Mode</strong><div style="font-size:11px;color:var(--m)">મેસેજ/નોટિફિકેશન બંધ</div></div><label class="sw"><input type="checkbox" id="fT" onchange="setFocus()"><span class="sl"></span></label></div>
+<div class="st">👥 ક્લાસમેટ્સ</div><div id="friends"></div></div></section>
+
+<section id="tNotes" class="hidden"><div id="notes"></div></section>
+<section id="tLb" class="hidden"><div class="card"><div class="st">🏆 Today's Leaderboard</div><div class="sub">દરેક સાચા જવાબના 10 પોઈન્ટ</div><div class="pod" id="pod"></div><div id="ranks"></div></div></section>
+</main>
+
+<nav class="nav hidden" id="nav"><button class="nb on" data-t="home" onclick="tab('home')"><b>🏠</b>Home</button><button class="nb" data-t="notes" onclick="tab('notes')"><b>📝</b>Notes</button><button class="nb" data-t="lb" onclick="tab('lb')"><b>🏆</b>Rank</button></nav>
+
+<div class="ov" id="ov"><div class="mb" id="mb"></div></div>
+</div>
+<script>
+const K='shs_v1',SUBS=['Physics','Biology / Maths','Chemistry'],TM=['07:30','08:00','08:30'];
+let S;try{S=JSON.parse(localStorage.getItem(K))}catch(e){}
+S=S||{};S.mcqs=S.mcqs||{};S.notes=S.notes||[];S.scores=S.scores||{};S.done=S.done||{};S.students=S.students||[];
+const $=i=>document.getElementById(i),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function save(){localStorage.setItem(K,JSON.stringify(S))}
+function resetCheck(){const d=new Date().toDateString();if(S.date!==d){S.date=d;S.mcqs={};S.scores={};S.done={};save();if(S.user)render()}}
+let role='';
+function openLogin(r){role=r;$('roleS').classList.add('hidden');$('loginS').classList.remove('hidden');$('subG').classList.toggle('hidden',r!=='sir');$('ft').textContent=r==='sir'?'Sir Login':'Student Login'}
+function backRoles(){$('loginS').classList.add('hidden');$('roleS').classList.remove('hidden')}
+function doLogin(){const n=$('iN').value.trim();if(!n)return alert('કૃપા કરી નામ લખો');
+S.user={role,name:n,subject:role==='sir'?$('iS').value:'',taluka:$('iT').value.trim(),district:$('iD').value.trim()};
+if(role==='student'&&!S.students.includes(n))S.students.push(n);save();start()}
+function logout(){if(confirm('Logout કરવું છે?')){delete S.user;save();location.reload()}}
+function start(){resetCheck();['roleS','loginS'].forEach(i=>$(i).classList.add('hidden'));['hd','main','nav'].forEach(i=>$(i).classList.remove('hidden'));
+$('ub').textContent=(S.user.role==='sir'?'Sir: ':'')+S.user.name;$('dt').textContent=new Date().toLocaleDateString('en-GB');
+$('fT').checked=!!S.focus;tab('home')}
+function tab(t){['Home','Comm','Notes','Lb'].forEach(x=>$('t'+x).classList.add('hidden'));
+const m={home:'Home',notes:'Notes',lb:'Lb',comm:'Comm'};$('t'+m[t]).classList.remove('hidden');
+document.querySelectorAll('.nb').forEach(b=>b.classList.toggle('on',b.dataset.t===t));render()}
+function show(t){tab(t)}
+function render(){const sir=S.user.role==='sir';
+$('tests').innerHTML=SUBS.map((s,i)=>`<div class="ti"><div class="tb">${TM[i]}<span>PM</span></div><div class="sc s${i}"><div class="sh"><span>${s}</span><small>${(S.mcqs[s]||[]).length} MCQs</small></div><div class="meta">Daily Evening Revision Test</div><div><button class="bs" onclick="startQuiz(${i})">Start Test</button>${sir&&S.user.subject===s?`<button class="plus" onclick="addMcq(${i})">+</button>`:''}</div></div></div>`).join('');
+$('notes').innerHTML=SUBS.map(s=>{const l=S.notes.filter(n=>n.s===s);return `<div class="card"><div class="st"><span>${s}</span>${sir&&S.user.subject===s?`<button class="plus" onclick="addNote()">+</button>`:''}</div>${l.length?l.map(n=>`<div class="note"><h4>${esc(n.t)}</h4><p>${esc(n.b)}</p><small>${esc(n.by)} • ${esc(n.d)}</small></div>`).join(''):'<div class="sub">હજી કોઈ નોટ્સ નથી</div>'}</div>`}).join('');
+const r=Object.entries(S.scores).sort((a,b)=>b[1]-a[1]),md=['🥈','🥇','🥉'];
+$('pod').innerHTML=r.length?[1,0,2].filter(i=>r[i]).map(i=>`<div class="pb ${i===0?'g':''}"><i>${md[i===0?1:i===1?0:2]}</i>${esc(r[i][0])}<em>${r[i][1]} pts</em></div>`).join(''):'<div class="sub" style="grid-column:1/4">આજે હજી કોઈએ ટેસ્ટ આપી નથી</div>';
+$('ranks').innerHTML=r.map((x,i)=>`<div class="rr ${x[0]===S.user.name?'me':''}"><span>#${i+1} ${esc(x[0])}</span><span>${x[1]} pts</span></div>`).join('');
+$('friends').innerHTML=S.students.length?S.students.map(n=>`<div class="fr"><div class="av">${esc(n[0].toUpperCase())}</div><div>${esc(n)}${n===S.user.name?' (You)':''}</div></div>`).join(''):'<div class="sub">કોઈ ક્લાસમેટ નથી</div>'}
+function setFocus(){S.focus=$('fT').checked;save()}
+function modal(h){$('mb').innerHTML=h;$('ov').style.display='flex'}
+function closeM(){$('ov').style.display='none'}
+function addMcq(i){modal(`<div class="st">${SUBS[i]} MCQ ઉમેરો</div><div class="fg"><label>પ્રશ્ન</label><textarea id="q" rows="2"></textarea></div>${[1,2,3,4].map(n=>`<div class="fg"><label>વિકલ્પ ${n}</label><input id="o${n}"></div>`).join('')}<div class="fg"><label>સાચો જવાબ</label><select id="ans"><option value="0">1</option><option value="1">2</option><option value="2">3</option><option value="3">4</option></select></div><button class="btn" onclick="saveMcq(${i})">Save</button><button class="back" style="margin-top:10px" onclick="closeM()">Cancel</button>`)}
+function saveMcq(i){const q=$('q').value.trim(),o=[1,2,3,4].map(n=>$('o'+n).value.trim());if(!q||o.includes(''))return alert('બધી વિગતો ભરો');
+(S.mcqs[SUBS[i]]=S.mcqs[SUBS[i]]||[]).push({q,o,a:+$('ans').value});save();closeM();render()}
+function addNote(){modal(`<div class="st">નોટ્સ ઉમેરો</div><div class="fg"><label>ટાઇટલ</label><input id="nt"></div><div class="fg"><label>નોટ્સ</label><textarea id="nb" rows="5"></textarea></div><button class="btn" onclick="saveNote()">Save</button><button class="back" style="margin-top:10px" onclick="closeM()">Cancel</button>`)}
+function saveNote(){const t=$('nt').value.trim(),b=$('nb').value.trim();if(!t||!b)return alert('બધી વિગતો ભરો');
+S.notes.unshift({s:S.user.subject,t,b,by:S.user.name,d:new Date().toLocaleDateString('en-GB')});save();closeM();render()}
+let Q,qi,pts;
+function startQuiz(i){const s=SUBS[i],l=S.mcqs[s]||[];if(!l.length)return alert('હજી MCQ ઉમેર્યા નથી');
+if(S.user.role==='student'&&S.done[S.user.name+s])return alert('તમે આજે આ ટેસ્ટ આપી દીધી છે');
+Q={s,l};qi=0;pts=0;ask()}
+function ask(){if(qi>=Q.l.length){const stu=S.user.role==='student';if(stu){S.scores[S.user.name]=(S.scores[S.user.name]||0)+pts;S.done[S.user.name+Q.s]=1;save()}
+modal(`<div class="st">🎉 ટેસ્ટ પૂરી</div><p style="margin:10px 0">સાચા જવાબ: ${pts/10}/${Q.l.length}<br>પોઈન્ટ: ${pts}${stu?'':' (Sir માટે સ્કોર સેવ નથી થતો)'}</p><button class="btn" onclick="closeM();render()">બંધ કરો</button>`);return}
+const q=Q.l[qi];modal(`<div class="sub">${Q.s} • ${qi+1}/${Q.l.length}</div><div class="st" style="margin-bottom:12px">${esc(q.q)}</div>${q.o.map((o,k)=>`<button class="qo" onclick="pick(${k},this)">${esc(o)}</button>`).join('')}`)}
+function pick(k,el){const q=Q.l[qi];document.querySelectorAll('.qo').forEach((b,n)=>{b.disabled=true;if(n===q.a)b.style.background='#bbf7d0'});
+if(k===q.a)pts+=10;else el.style.background='#fecaca';setTimeout(()=>{qi++;ask()},900)}
+setInterval(resetCheck,30000);
+if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+resetCheck();if(S.user)start();
+</script></body></html>
