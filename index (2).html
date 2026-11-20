@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="gu"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#4f46e5"><link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes">
+<title>Seth H H Sirolawala High School</title>
+<style>
+:root{--p:#4f46e5;--pl:#eef2ff;--bg:#f4f6fb;--c:#fff;--t:#1e293b;--m:#64748b;--b:#e2e8f0}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Roboto,Arial,sans-serif}
+body{background:#cbd5e1;display:flex;justify-content:center;min-height:100vh}
+.app{width:100%;max-width:430px;background:var(--bg);min-height:100vh;display:flex;flex-direction:column;position:relative}
+.hd{background:var(--c);padding:12px 16px;border-bottom:1px solid var(--b);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20}
+.badge{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#4f46e5,#0ea5e9);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.row{display:flex;align-items:center;gap:10px}.sn{font-size:13px;font-weight:700}
+.chip{font-size:11px;background:var(--pl);color:var(--p);padding:4px 8px;border-radius:12px;font-weight:600;cursor:pointer}
+.content{flex:1;padding:14px;padding-bottom:85px}
+.auth{flex:1;display:flex;flex-direction:column;justify-content:center;padding:24px 18px}
+.card{background:var(--c);border-radius:16px;padding:14px;margin-bottom:14px;box-shadow:0 2px 10px rgba(15,23,42,.05)}
+.auth .card{padding:24px 18px}
+h1{font-size:18px;margin-bottom:4px}.sub{font-size:12px;color:var(--m);margin-bottom:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.role{background:var(--pl);border:2px solid transparent;border-radius:16px;padding:20px 10px;text-align:center;cursor:pointer}
+.role:active{border-color:var(--p)}.role b{display:block;font-size:34px;margin-bottom:6px}
+.fg{margin-bottom:12px}.fg label{display:block;font-size:12px;font-weight:600;margin-bottom:5px}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--b);border-radius:10px;font-size:14px;background:#f8fafc;outline:none}
+.btn{width:100%;padding:12px;background:var(--p);color:#fff;border:0;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer}
+.back{background:none;border:0;color:var(--m);font-size:13px;margin-bottom:10px;cursor:pointer}
+.st{font-size:15px;font-weight:700;margin-bottom:4px;display:flex;justify-content:space-between}
+.ti{display:flex;gap:10px;margin-bottom:12px}
+.tb{width:64px;background:#f1f5f9;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+.tb span{font-size:10px;color:var(--m)}
+.sc{flex:1;border-radius:14px;padding:12px}
+.s0{background:#e0f2fe;border-left:4px solid #0284c7}.s1{background:#dcfce7;border-left:4px solid #16a34a}.s2{background:#f3e8ff;border-left:4px solid #9333ea}
+.sh{display:flex;justify-content:space-between;font-weight:700;font-size:14px}.sh small{font-size:11px}
+.meta{font-size:11px;color:#475569;margin:4px 0 8px}
+.bs{padding:6px 12px;border-radius:8px;font-size:12px;font-weight:600;border:0;background:var(--t);color:#fff;cursor:pointer}
+.plus{background:var(--p);color:#fff;width:28px;height:28px;border-radius:50%;border:0;font-size:18px;margin-left:8px;cursor:pointer}
+.qb{background:#f8fafc;border:1px solid var(--b);border-radius:14px;padding:14px 8px;text-align:center;cursor:pointer;font-size:13px;font-weight:700}
+.qb b{display:block;font-size:26px}.qb small{display:block;font-weight:400;color:var(--m);font-size:11px}
+.note{background:#f8fafc;padding:10px;border-radius:10px;margin-top:8px;border-left:3px solid var(--p)}
+.note h4{font-size:13px}.note p{font-size:12px;margin-top:4px;white-space:pre-line;color:#334155}.note small{font-size:10px;color:var(--m)}
+.pod{display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:8px;align-items:end;margin:14px 0;text-align:center}
+.pb{background:#f8fafc;border:1px solid var(--b);border-radius:14px;padding:12px 4px;font-size:12px;font-weight:700}
+.pb.g{background:linear-gradient(#fef9c3,#fff);border-color:#eab308;padding-top:18px}.pb i{display:block;font-style:normal;font-size:20px}.pb em{display:block;font-style:normal;color:var(--p);font-size:11px}
+.rr{display:flex;justify-content:space-between;padding:10px 12px;background:#f8fafc;border-radius:12px;margin-bottom:8px;font-size:13px}
+.rr.me{background:var(--pl);border:1px solid var(--p);font-weight:700}
+.focus{display:flex;justify-content:space-between;align-items:center;background:#f8fafc;padding:12px;border-radius:12px;border:1px solid var(--b);margin-bottom:12px}
+.sw{position:relative;width:46px;height:24px}.sw input{opacity:0;width:0;height:0}
+.sl{position:absolute;inset:0;background:#cbd5e1;border-radius:24px;transition:.3s;cursor:pointer}
+.sl:before{content:"";position:absolute;height:18px;width:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s}
+input:checked+.sl{background:var(--p)}input:checked+.sl:before{transform:translateX(22px)}
+.fr{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--b);font-size:13px}
+.av{width:38px;height:38px;border-radius:50%;background:#e2e8f0;font-weight:700;display:flex;align-items:center;justify-content:center}
+.nav{position:fixed;bottom:0;width:100%;max-width:430px;background:var(--c);border-top:1px solid var(--b);display:grid;grid-template-columns:repeat(3,1fr);padding:8px 0;z-index:30}
+.nb{background:none;border:0;color:var(--m);font-size:11px;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer}
+.nb.on{color:var(--p)}.nb b{font-size:20px}
+.ov{position:fixed;inset:0;background:rgba(15,23,42,.55);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+.mb{background:var(--c);width:100%;max-width:390px;border-radius:18px;padding:18px;max-height:85vh;overflow-y:auto}
+.qo{width:100%;text-align:left;padding:10px 12px;margin-bottom:8px;border:1px solid var(--b);border-radius:10px;background:#f8fafc;font-size:13px;cursor:pointer}
+.fl{margin-top:6px;padding:8px;background:#e0e7ff;border-radius:8px;font-size:12px;cursor:pointer}.ab{padding:10px;border:1px dashed var(--p);border-radius:10px;background:#eef2ff;color:var(--p);font-weight:600;font-size:13px;cursor:pointer;width:100%}.cr{text-align:center;font-size:12px;font-weight:600;color:var(--m);margin:14px 0 6px}.gbar{display:flex;gap:6px;margin-bottom:12px}.gp{flex:1;padding:8px 0;border:1px solid var(--b);border-radius:10px;background:#fff;font-size:12px;font-weight:700;color:var(--m);cursor:pointer}.gp.on{background:var(--p);color:#fff;border-color:var(--p)}.s3{background:#ffedd5;border-left:4px solid #ea580c}.s4{background:#fce7f3;border-left:4px solid #db2777}.s5{background:#ccfbf1;border-left:4px solid #0d9488}.hidden{display:none!important}
+</style></head><body>
+<div class="app">
+<header class="hd hidden" id="hd"><div class="row"><div class="badge">SH</div><div><div class="sn">Seth H H Sirolawala High School</div><div style="font-size:11px;font-weight:600;color:var(--p)">Created by Krish</div></div></div><div class="chip" id="ub" onclick="logout()"></div></header>
+
+<div class="auth" id="roleS"><div class="card"><div style="text-align:center;margin-bottom:20px"><div class="badge" style="margin:0 auto 10px;width:48px;height:48px;font-size:18px">SH</div><h1>Seth H H Sirolawala High School</h1><p class="sub">Smart Classroom & Daily Revision Portal</p></div>
+<div class="grid"><div class="role" onclick="pickRole('sir')"><b>👨‍🏫</b><strong>Sir (Teacher)</strong><div class="sub">MCQ & Notes અપલોડ કરો</div></div>
+<div class="role" onclick="pickRole('student')"><b>👨‍🎓</b><strong>Student</strong><div class="sub">Daily Test & Notes જુઓ</div></div></div></div><div class="cr">Created by Krish</div></div>
+
+<div class="auth hidden" id="classS"><div class="card"><button class="back" onclick="backRoles()">← પાછા જાઓ</button><h1 id="ct">ધોરણ પસંદ કરો</h1><p class="sub">તમારું ધોરણ પસંદ કરો. તમને ફક્ત આ ધોરણનું કન્ટેન્ટ દેખાશે.</p><div class="grid"><div class="role" onclick="pickClass('9')"><b>9</b><strong>ધોરણ 9</strong></div><div class="role" onclick="pickClass('10')"><b>10</b><strong>ધોરણ 10</strong></div><div class="role" onclick="pickClass('11')"><b>11</b><strong>ધોરણ 11</strong></div><div class="role" onclick="pickClass('12')"><b>12</b><strong>ધોરણ 12</strong></div></div></div></div>
+
+<div class="auth hidden" id="loginS"><div class="card"><button class="back" onclick="backClass()">← પાછા જાઓ</button><h1 id="ft">Login</h1><p class="sub" id="ls">તમારી વિગતો ભરો</p>
+<div class="fg"><label>પૂરું નામ</label><input id="iN" placeholder="તમારું નામ લખો..."></div>
+<div class="fg" id="subG"><label>તમારો વિષય</label><select id="iS"><option>Social Science</option><option>Science</option><option>English</option><option>Gujarati</option><option>Hindi</option><option>Maths</option><option>Physics</option><option>Chemistry</option><option>Biology / Maths</option></select></div>
+<div class="fg hidden" id="pwG"><label>🔑 Sir Password</label><input id="iP" type="password" placeholder="Password નાખો"></div><div class="fg"><label>તાલુકો</label><input id="iT" placeholder="દા.ત. Bodeli"></div>
+<div class="fg"><label>જિલ્લો</label><input id="iD" placeholder="દા.ત. Chhota Udepur"></div>
+<button class="btn" onclick="doLogin()">આગળ વધો →</button></div></div>
+
+<main class="content hidden" id="main">
+<div class="gbar" id="gbar"></div><section id="tHome">
+<div class="card"><div class="st"><span>📅 આજનું પુનરાવર્તન</span><span style="font-size:11px;color:var(--p)" id="dt"></span></div><div class="sub">રાત્રે 12:00 વાગ્યે પ્રશ્નો અને સ્કોર રીસેટ થશે</div><div id="tests"></div></div>
+<div class="card"><div class="st">⚡ Quick Actions</div><div class="sub">ક્લાસ કમ્યુનિટી અને રેન્ક</div><div class="grid">
+<div class="qb" onclick="show('comm')"><b>👥</b>Community<small>Focus Mode & Friends</small></div>
+<div class="qb" onclick="tab('lb')"><b>🏆</b>Today's Rank<small>લાઈવ સ્કોર જુઓ</small></div></div></div><div class="card hidden" id="pwCard"><div class="st">🔑 Sir Password</div><div class="sub">Password બદલવા માટે</div><button class="btn" onclick="chPw()">Password બદલો</button></div><div class="cr">Created by Krish</div></section>
+
+<section id="tComm" class="hidden"><div class="card"><button class="back" onclick="tab('home')">← Home</button>
+<div class="focus"><div><strong style="font-size:14px">Focus Mode</strong><div style="font-size:11px;color:var(--m)">મેસેજ/નોટિફિકેશન બંધ</div></div><label class="sw"><input type="checkbox" id="fT" onchange="setFocus()"><span class="sl"></span></label></div>
+<div class="st">👥 ક્લાસમેટ્સ</div><div id="friends"></div></div></section>
+
+<section id="tNotes" class="hidden"><div id="notes"></div></section>
+<section id="tLb" class="hidden"><div class="card"><div class="st">🏆 Today's Leaderboard</div><div class="sub">દરેક સાચા જવાબના 10 પોઈન્ટ</div><div class="pod" id="pod"></div><div id="ranks"></div></div></section>
+</main>
+
+<nav class="nav hidden" id="nav"><button class="nb on" data-t="home" onclick="tab('home')"><b>🏠</b>Home</button><button class="nb" data-t="notes" onclick="tab('notes')"><b>📝</b>Notes</button><button class="nb" data-t="lb" onclick="tab('lb')"><b>🏆</b>Rank</button></nav>
+
+<div class="ov" id="ov"><div class="mb" id="mb"></div></div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+// ====== FIREBASE CONFIG: ahi tamaro firebaseConfig paste karo ======
+const FIREBASE_CONFIG={
+  apiKey:"AIzaSyBrrwSb40OJz9tiO4jQglCtqgtGplG-kW0",
+  authDomain:"smart-class-dfe96.firebaseapp.com",
+  projectId:"smart-class-dfe96",
+  storageBucket:"smart-class-dfe96.firebasestorage.app",
+  messagingSenderId:"311779403201",
+  appId:"1:311779403201:web:84b61bb225985669a43b40"
+};
+// ===================================================================
+</script>
+<script>
+let SUBS=[];const K='shs_v1',TM=['07:30','08:00','08:30'],TM6=['06:00','06:30','07:00','07:30','08:00','08:30'],SIX=['Social Science','Science','English','Gujarati','Hindi','Maths'],SUBJ={'9':SIX,'10':SIX,'11':['Physics','Biology / Maths','Chemistry'],'12':['Physics','Biology / Maths','Chemistry']},MM=x=>x==='Maths'||x==='Biology / Maths',can=s=>S.user.role==='sir'&&(S.user.subject===s||(MM(S.user.subject)&&MM(s)));
+let S;try{S=JSON.parse(localStorage.getItem(K))}catch(e){}
+S=S||{};S.mcqs=S.mcqs||{};S.notes=S.notes||[];S.scores=S.scores||{};S.done=S.done||{};S.students=S.students||[];S.sheets=S.sheets||{};S.students=S.students.map(x=>typeof x==='string'?{name:x,g:'10'}:x);
+const CLOUD=!!FIREBASE_CONFIG.apiKey&&typeof firebase!=='undefined';let DBF,UN=[],errShown=0;
+const TD=()=>{const d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()},ID=s=>String(s).replace(/\//g,'-');
+if(CLOUD){S.mcqs={};S.notes=[];S.scores={};S.done={};S.students=[];S.sheets={};firebase.initializeApp(FIREBASE_CONFIG);DBF=firebase.firestore()}
+function fbErr(e){console.error(e);if(!errShown++)alert('Firebase error: '+(e.code||e.message)+'\nFirestore Rules ane config check karo')}
+function ui(){if(S.user)render()}
+function subscribe(){UN.forEach(u=>u());UN=[];const day=TD(),c=n=>DBF.collection(n),td=n=>c(n).where('day','==',day);
+UN.push(td('mcqs').onSnapshot(s=>{const m={};s.docs.map(d=>d.data()).sort((a,b)=>a.ts-b.ts).forEach(x=>{const k=x.g+'|'+x.s;(m[k]=m[k]||[]).push({q:x.q,o:x.o,a:x.a})});S.mcqs=m;ui()},fbErr));
+UN.push(td('sheets').onSnapshot(s=>{const m={};s.docs.map(d=>d.data()).sort((a,b)=>a.ts-b.ts).forEach(x=>(m[x.key]=m[x.key]||[]).push({id:x.id,n:x.n,t:x.t}));S.sheets=m;ui()},fbErr));
+UN.push(td('scores').onSnapshot(s=>{const m={};s.docs.forEach(d=>{const x=d.data();m[x.g+'|'+x.name]=x.pts});S.scores=m;ui()},fbErr));
+UN.push(td('done').onSnapshot(s=>{const m={};s.docs.forEach(d=>m[d.data().k]=1);S.done=m;ui()},fbErr));
+UN.push(c('notes').onSnapshot(s=>{S.notes=s.docs.map(d=>d.data()).sort((a,b)=>b.ts-a.ts);ui()},fbErr));
+UN.push(c('students').onSnapshot(s=>{S.students=s.docs.map(d=>d.data()).filter(x=>x.name&&x.g).sort((a,b)=>a.name.localeCompare(b.name));ui()},fbErr))}
+const $=i=>document.getElementById(i),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function save(){localStorage.setItem(K,JSON.stringify(CLOUD?{user:S.user,std:S.std,focus:S.focus}:S))}
+function resetCheck(){const d=new Date().toDateString();if(CLOUD){if(window.__day!==d){window.__day=d;if(S.user)subscribe()}return}if(S.date!==d){S.date=d;Object.values(S.sheets||{}).flat().forEach(f=>delF(f.id));S.sheets={};S.mcqs={};S.scores={};S.done={};save();if(S.user)render()}}
+let role='';
+let CG='10';
+function pickRole(r){role=r;$('roleS').classList.add('hidden');$('classS').classList.remove('hidden');$('ct').textContent=r==='sir'?'Sir: ધોરણ પસંદ કરો':'Student: ધોરણ પસંદ કરો'}
+function pickClass(g){CG=g;$('classS').classList.add('hidden');$('loginS').classList.remove('hidden');const sir=role==='sir';
+$('subG').classList.toggle('hidden',!sir);$('pwG').classList.toggle('hidden',!sir);$('iP').value='';
+$('iS').innerHTML=(SUBJ[g]||SIX).map(s=>`<option>${esc(s)}</option>`).join('');
+$('ft').textContent=sir?'Sir Login':'Student Login';$('ls').textContent='ધોરણ '+g+' • તમારી વિગતો ભરો'}
+function backClass(){$('loginS').classList.add('hidden');$('classS').classList.remove('hidden')}
+function backRoles(){['classS','loginS'].forEach(i=>$(i).classList.add('hidden'));$('roleS').classList.remove('hidden')}
+const DEFPW='sir123';
+async function hash(s){try{const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('shs|'+s));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}catch(e){let h=5381;for(const c of 'shs|'+s)h=(h*33^c.charCodeAt(0))>>>0;return 'f'+h}}
+async function pwHash(){if(CLOUD){const d=await DBF.collection('settings').doc('sir').get();if(d.exists)return d.data().h}else if(S.pw)return S.pw;return hash(DEFPW)}
+function chPw(){modal(`<div class="st">🔑 Password બદલો</div><div class="fg"><label>જૂનો Password</label><input id="p0" type="password"></div><div class="fg"><label>નવો Password (ઓછામાં ઓછા 4 અક્ષર)</label><input id="p1" type="password"></div><div class="fg"><label>નવો Password ફરી લખો</label><input id="p2" type="password"></div><button class="btn" onclick="savePw()">Save</button><button class="back" style="margin-top:10px" onclick="closeM()">Cancel</button>`)}
+async function savePw(){const a=$('p0').value,b=$('p1').value;if(b.length<4)return alert('નવો Password ઓછામાં ઓછા 4 અક્ષરનો રાખો');if(b!==$('p2').value)return alert('બંને નવા Password સરખા નથી');
+try{if(await hash(a)!==await pwHash())return alert('જૂનો Password ખોટો છે');const h=await hash(b);if(CLOUD)await DBF.collection('settings').doc('sir').set({h});else{S.pw=h;save()}closeM();alert('✅ Password બદલાઈ ગયો')}catch(e){alert('ન થયું: '+(e.message||e))}}
+async function doLogin(){const n=$('iN').value.trim();if(!n)return alert('કૃપા કરી નામ લખો');
+if(role==='sir'){try{if(await hash($('iP').value)!==await pwHash())return alert('Password ખોટો છે')}catch(e){return alert('Password ચકાસી ન શકાયો: '+(e.message||e))}}
+S.user={role,name:n,subject:role==='sir'?$('iS').value:'',taluka:$('iT').value.trim(),district:$('iD').value.trim()};
+if(role==='student'){if(CLOUD)DBF.collection('students').doc(ID(CG+'_'+n)).set({name:n,g:CG}).catch(fbErr);if(!S.students.some(x=>x.name===n&&x.g===CG))S.students.push({name:n,g:CG})}S.std=CG;save();start()}
+function logout(){if(confirm('Logout કરવું છે?')){delete S.user;save();location.reload()}}
+function start(){resetCheck();if(CLOUD)subscribe();['roleS','loginS'].forEach(i=>$(i).classList.add('hidden'));['hd','main','nav'].forEach(i=>$(i).classList.remove('hidden'));
+$('ub').textContent=(S.user.role==='sir'?'Sir: ':'')+S.user.name+(S.user.role==='sir'?'':' • ધો.'+G());$('pwCard').classList.toggle('hidden',S.user.role!=='sir');$('dt').textContent=new Date().toLocaleDateString('en-GB');
+$('fT').checked=!!S.focus;tab('home')}
+function tab(t){$('gbar').classList.toggle('hidden',t==='comm'||S.user.role!=='sir');['Home','Comm','Notes','Lb'].forEach(x=>$('t'+x).classList.add('hidden'));
+const m={home:'Home',notes:'Notes',lb:'Lb',comm:'Comm'};$('t'+m[t]).classList.remove('hidden');
+document.querySelectorAll('.nb').forEach(b=>b.classList.toggle('on',b.dataset.t===t));render()}
+function show(t){tab(t)}
+function render(){SUBS=SUBJ[G()]||SUBJ['11'];const sir=S.user.role==='sir';$('gbar').innerHTML=['9','10','11','12'].map(g=>`<button class="gp ${g===G()?'on':''}" onclick="setG('${g}')">ધોરણ ${g}</button>`).join('');
+$('tests').innerHTML=SUBS.map((s,i)=>`<div class="ti"><div class="tb">${(SUBS.length>3?TM6:TM)[i]}<span>PM</span></div><div class="sc s${i}"><div class="sh"><span>${s}</span><small>${(S.mcqs[kk(s)]||[]).length}/${MAXQ} MCQs</small></div><div class="meta">Daily Evening Revision Test</div><div><button class="bs" onclick="startQuiz(${i})">Start Test</button>${((S.sheets||{})[kk(s)]||[]).length?`<button class="bs" style="margin-left:6px;background:#0284c7" onclick="showSheets(${i})">📄 ફાઇલ (${S.sheets[kk(s)].length})</button>`:''}${can(s)?`<button class="plus" onclick="addMcq(${i})">+</button>`:''}</div></div></div>`).join('');
+$('notes').innerHTML=SUBS.map(s=>{const l=S.notes.filter(n=>n.s===s&&n.g===G());return `<div class="card"><div class="st"><span>${s}</span>${can(s)?`<button class="plus" onclick="addNote('${s}')">+</button>`:''}</div>${l.length?l.map(n=>`<div class="note"><h4>${esc(n.t)}</h4><p>${esc(n.b)}</p>${flist(n.f)}<small>${esc(n.by)} • ${esc(n.d)}</small></div>`).join(''):'<div class="sub">હજી કોઈ નોટ્સ નથી</div>'}</div>`}).join('');
+const r=Object.entries(S.scores).filter(e=>e[0].startsWith(G()+'|')).map(e=>[e[0].slice(G().length+1),e[1]]).sort((a,b)=>b[1]-a[1]),md=['🥈','🥇','🥉'];
+$('pod').innerHTML=r.length?[1,0,2].filter(i=>r[i]).map(i=>`<div class="pb ${i===0?'g':''}"><i>${md[i===0?1:i===1?0:2]}</i>${esc(r[i][0])}<em>${r[i][1]} pts</em></div>`).join(''):'<div class="sub" style="grid-column:1/4">આજે હજી કોઈએ ટેસ્ટ આપી નથી</div>';
+$('ranks').innerHTML=r.map((x,i)=>`<div class="rr ${x[0]===S.user.name?'me':''}"><span>#${i+1} ${esc(x[0])}</span><span>${x[1]} pts</span></div>`).join('');
+$('friends').innerHTML=FS().length?FS().map(n=>`<div class="fr"><div class="av">${esc(n[0].toUpperCase())}</div><div>${esc(n)}${n===S.user.name?' (You)':''}</div></div>`).join(''):'<div class="sub">કોઈ ક્લાસમેટ નથી</div>'}
+const FS=()=>S.students.filter(x=>x.g===G()).map(x=>x.name);
+function setFocus(){S.focus=$('fT').checked;save()}
+function modal(h){$('mb').innerHTML=h;$('ov').style.display='flex'}
+function closeM(){$('ov').style.display='none'}
+const MAXQ=30;let pend=[],DB;
+function idb(){return DB||(DB=new Promise((ok,no)=>{const r=indexedDB.open('shs_files',1);r.onupgradeneeded=()=>r.result.createObjectStore('f');r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error)}))}
+async function putF(id,v){if(CLOUD)return DBF.collection('files').doc(id).set(v);const d=await idb();return new Promise((ok,no)=>{const t=d.transaction('f','readwrite');t.objectStore('f').put(v,id);t.oncomplete=ok;t.onerror=()=>no(t.error)})}
+async function getF(id){if(CLOUD){const d=await DBF.collection('files').doc(id).get();return d.exists?d.data():null}const d=await idb();return new Promise((ok,no)=>{const q=d.transaction('f').objectStore('f').get(id);q.onsuccess=()=>ok(q.result);q.onerror=()=>no(q.error)})}
+async function delF(id){try{(await idb()).transaction('f','readwrite').objectStore('f').delete(id)}catch(e){}}
+async function store(a,p){const r=[];for(const x of a){const id=p+Date.now()+Math.random().toString(36).slice(2,6);await putF(id,x);r.push({id,n:x.n,t:x.t})}return r}
+function prep(f){return new Promise((ok,no)=>{if(f.size>8e6)return no('ફાઇલ બહુ મોટી છે (8MB થી ઓછી જોઈએ)');
+const r=new FileReader();r.onerror=()=>no('ફાઇલ વંચાઈ નહીં');
+r.onload=()=>{if(!f.type.startsWith('image/')){if(CLOUD&&r.result.length>9e5)return no('PDF/ફાઇલ બહુ મોટી છે (લગભગ 650KB થી ઓછી જોઈએ). ફોટો વાપરો');return ok({n:f.name,t:f.type||'application/octet-stream',d:r.result})}
+const im=new Image();im.onload=()=>{let mx=CLOUD?1000:1400,q=CLOUD?.6:.75,d;do{const k=Math.min(1,mx/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);d=c.toDataURL('image/jpeg',q);mx*=.8;q=Math.max(.4,q-.05)}while(CLOUD&&d.length>9e5&&mx>300);ok({n:f.name.replace(/\.\w+$/,'')+'.jpg',t:'image/jpeg',d})};im.onerror=()=>no('ફોટો ખૂલ્યો નહીં');im.src=r.result};r.readAsDataURL(f)})}
+function attach(cam){const i=document.createElement('input');i.type='file';i.multiple=!cam;i.accept=cam?'image/*':'image/*,application/pdf,.doc,.docx,.ppt,.pptx,.txt';if(cam)i.capture='environment';
+i.onchange=async()=>{for(const f of i.files){try{pend.push(await prep(f))}catch(e){alert(f.name+': '+e)}}showPend()};i.click()}
+function showPend(){$('pl').innerHTML=pend.map((p,i)=>`<div>✅ ${esc(p.n)} <a onclick="pend.splice(${i},1);showPend()" style="color:#dc2626;padding:4px">✕</a></div>`).join('')}
+const ATT=`<div class="fg"><label>📎 ફાઇલ / 📷 ફોટો જોડો (ટાઇપ કરવું જરૂરી નથી)</label><div class="grid"><button class="ab" onclick="attach(0)">📎 File / PDF</button><button class="ab" onclick="attach(1)">📷 Camera</button></div><div id="pl" class="sub" style="margin:6px 0 0"></div></div>`;
+function flist(l){return (l||[]).map(f=>`<div class="fl" onclick="openF('${f.id}')">${f.t.startsWith('image/')?'🖼️':'📄'} ${esc(f.n)}</div>`).join('')}
+async function openF(id){const f=await getF(id);if(!f)return alert('ફાઇલ મળી નથી');const u=URL.createObjectURL(await (await fetch(f.d)).blob());
+modal(`<div class="st">${esc(f.n)}</div>${f.t.startsWith('image/')?`<img src="${u}" style="width:100%;border-radius:10px;margin:8px 0">`:''}<a class="btn" style="display:block;text-align:center;text-decoration:none;margin-bottom:8px" href="${u}" download="${esc(f.n)}">⬇️ ખોલો / Download</a><button class="back" onclick="closeM()">બંધ કરો</button>`)}
+const G=()=>S.std||'10',kk=s=>G()+'|'+s;function setG(g){if(S.user.role!=='sir')return;S.std=g;save();render()}
+function showSheets(i){const s=SUBS[i];modal(`<div class="st">${s} – ફાઇલો (ધોરણ ${G()})</div>${flist(S.sheets[kk(s)])}<button class="back" style="margin-top:10px" onclick="closeM()">બંધ કરો</button>`)}
+function addMcq(i){pend=[];const s=SUBS[i];modal(`<div class="st">ધોરણ ${G()} • ${s} MCQ (${(S.mcqs[kk(s)]||[]).length}/${MAXQ})</div><div class="grid" style="margin-bottom:10px"><button class="ab" onclick="BK={i:${i},raw:''};bulkMcq(${i},0)">📋 Bulk Paste</button><button class="ab" onclick="BK={i:${i},raw:''};bulkMcq(${i},1)">📷 Photo → MCQ</button></div>${ATT}<div class="sub">અથવા નીચે ટાઇપ કરો:</div><div class="fg"><label>પ્રશ્ન</label><textarea id="q" rows="2"></textarea></div>${[1,2,3,4].map(n=>`<div class="fg"><label>વિકલ્પ ${n}</label><input id="o${n}"></div>`).join('')}<div class="fg"><label>સાચો જવાબ</label><select id="ans"><option value="0">1</option><option value="1">2</option><option value="2">3</option><option value="3">4</option></select></div><button class="btn" onclick="saveMcq(${i},1)">Save + બીજો MCQ</button><button class="btn" style="background:#475569" onclick="saveMcq(${i},0)">Save અને બંધ કરો</button><button class="back" style="margin-top:10px" onclick="closeM()">Cancel</button>`)}
+async function saveMcq(i,again){const s=SUBS[i],K=kk(s),q=$('q').value.trim(),o=[1,2,3,4].map(n=>$('o'+n).value.trim()),typed=q||o.some(x=>x);
+if(typed&&(!q||o.includes('')))return alert('ટાઇપ કરો તો પ્રશ્ન અને ચારેય વિકલ્પ ભરો');
+if(!typed&&!pend.length)return alert('પ્રશ્ન ટાઇપ કરો અથવા ફાઇલ/ફોટો જોડો');
+const l=S.mcqs[K]=S.mcqs[K]||[];if(typed&&l.length>=MAXQ)return alert('એક વિષયમાં વધુમાં વધુ '+MAXQ+' MCQ');
+try{if(CLOUD){const day=TD();if(typed)await DBF.collection('mcqs').add({day,g:G(),s,q,o,a:+$('ans').value,ts:Date.now()});for(const f of await store(pend,'m'))await DBF.collection('sheets').add({day,key:K,id:f.id,n:f.n,t:f.t,ts:Date.now()});pend=[]}else{if(typed)l.push({q,o,a:+$('ans').value});if(pend.length)(S.sheets[K]=S.sheets[K]||[]).push(...await store(pend,'m'));pend=[];save()}}catch(e){return alert('સેવ ન થયું: '+e)}
+render();again?addMcq(i):closeM()}
+let BK={};
+function sb(l){const m=l.match(/^\s*(?:[•●○◯◦·*°©@]|[oO0])\s+(.*)$/);if(!m)return{b:0,t:l.trim()};let t=m[1].trim();const n=t.match(/^\(?(\S)[\)\].:]\s*(.*)$/);if(n)t=n[2];return{b:1,t}}
+function cleanOcr(t){let k=0;return t.split(/\r?\n/).map(l=>l.trim()).filter(Boolean).map(l=>{const s=sb(l);if(s.b){if(k>=4)k=0;return 'ABCD'[k++]+') '+s.t}k=0;return l}).join('\n')}
+function parseMcq(t){const L={A:0,B:1,C:2,D:3,a:0,b:1,c:2,d:3,'1':0,'2':1,'3':2,'4':3,'અ':0,'બ':1,'ક':2,'ડ':3};
+const optRe=/^\s*\(?([A-Da-d1-4અબકડ])[\).:\-]\s*(.*)$/,ansRe=/^\s*(?:(?:ans(?:wer)?|correct(?:\s*answer)?)\b|સાચો\s*જવાબ|જવાબ|સાચો|उत्तर)\s*[:\-=]?\s*\(?([A-Da-d1-4અબકડ])(?![A-Za-z])/i,qRe=/^\s*(?:Q\.?\s*)?\d+\s*[\.\)\-:]\s*(.*)$/i;
+const items=[];let cur=null;const push=()=>{if(cur&&cur.q)items.push(cur);cur=null};
+for(let line of t.split(/\r?\n/)){line=line.trim();if(!line)continue;let m;
+if(cur&&(m=line.match(ansRe))){cur.a=L[m[1]]!==undefined?L[m[1]]:L[m[1].toUpperCase()];continue}
+const bl=sb(line);if(bl.b){if(!cur||cur.o.length>=4){push();cur={q:'પ્રશ્ન લખો',o:[],a:-1}}cur.o.push(bl.t);continue}
+if(cur&&(m=line.match(optRe))){const dig=/\d/.test(m[1]);if(cur.o.length<4&&(!dig||+m[1]===cur.o.length+1)){cur.o.push(m[2].trim());continue}}
+if((m=line.match(qRe))){push();cur={q:m[1].trim(),o:[],a:-1};continue}
+if(cur){if(cur.o.length>=4||cur.a>=0){push();cur={q:line,o:[],a:-1}}else if(cur.o.length)cur.o[cur.o.length-1]+=' '+line;else cur.q+=' '+line}else cur={q:line,o:[],a:-1}}
+push();return items.filter(x=>x.o.length>=2).map(x=>{while(x.o.length<4)x.o.push('');return x})}
+function loadTess(){return window.Tesseract?Promise.resolve():new Promise((ok,no)=>{const s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js';s.onload=ok;s.onerror=()=>no('OCR લાઇબ્રેરી લોડ ન થઈ');document.head.appendChild(s)})}
+function scaled(f){return new Promise((ok,no)=>{const r=new FileReader();r.onerror=()=>no('ફાઇલ વંચાઈ નહીં');r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,1800/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);ok(c.toDataURL('image/jpeg',.9))};im.onerror=()=>no('ફોટો ખૂલ્યો નહીં');im.src=r.result};r.readAsDataURL(f)})}
+function ocrPick(){const inp=document.createElement('input');inp.type='file';inp.accept='image/*';inp.multiple=true;
+inp.onchange=async()=>{const op=$('op');const say=x=>{const e=$('op');if(e)e.textContent=x};try{say('OCR તૈયાર થાય છે... (પહેલી વાર થોડી વાર લાગે)');await loadTess();const lang=$('ol').value,out=[],tot=inp.files.length;let n=0;
+for(const f of inp.files){n++;const img=await scaled(f);const r=await Tesseract.recognize(img,lang,{logger:m=>say('ફોટો '+n+'/'+tot+': '+Math.round((m.progress||0)*100)+'%')});out.push(cleanOcr(r.data.text))}
+const bt=$('bt');if(bt){bt.value=(bt.value.trim()+'\n'+out.join('\n')).trim();BK.raw=bt.value}say('✅ થઈ ગયું. નીચેનો ટેક્સ્ટ તપાસી સુધારો, પછી "MCQ તપાસો" દબાવો.')}catch(e){say('❌ OCR ન થયું: '+(e.message||e)+' (ઇન્ટરનેટ ચાલુ છે?)')}};inp.click()}
+function bulkMcq(i,ocr){const s=SUBS[i];BK.i=i;
+modal(`<div class="st">ધોરણ ${G()} • ${s} – ${ocr?'Photo → MCQ':'Bulk MCQ'}</div>${ocr?`<div class="fg"><label>ફોટામાં ભાષા</label><select id="ol"><option value="guj+eng">ગુજરાતી + English</option><option value="eng">English</option><option value="hin+eng">હિન્દી + English</option></select></div><button class="ab" onclick="ocrPick()">📷 ફોટો / 🖼️ ગેલેરી પસંદ કરો</button><div id="op" class="sub" style="margin:6px 0"></div>`:''}<div class="sub">${ocr?'ફોટામાંથી વંચાયેલો ટેક્સ્ટ અહીં આવશે (ભૂલ હોય તો સુધારો). ફોર્મેટ:':'ઘણા MCQ એકસાથે પેસ્ટ કરો. ફોર્મેટ:'}</div><div class="fl" style="cursor:default;white-space:pre-line">1. પ્રશ્ન?\nA) વિકલ્પ 1\nB) વિકલ્પ 2\nC) વિકલ્પ 3\nD) વિકલ્પ 4\nAns: B</div><div class="fg" style="margin-top:8px"><textarea id="bt" rows="10">${esc(BK.raw||'')}</textarea></div><div class="sub">Ans લખ્યો ન હોય તો આગળ તમે પસંદ કરી શકશો.</div><button class="btn" onclick="bulkParse()">✅ MCQ તપાસો</button><button class="back" style="margin-top:10px" onclick="addMcq(${i})">← પાછા</button>`)}
+function bulkParse(){BK.raw=$('bt').value;BK.items=parseMcq(BK.raw);if(!BK.items.length)return alert('કોઈ MCQ ઓળખાયો નહીં. દરેક વિકલ્પ પહેલા A) B) C) D) લખો, અને પ્રશ્ન ઉપર લખો.');bulkReview()}
+function bulkReview(){const i=BK.i,s=SUBS[i],room=MAXQ-(S.mcqs[kk(s)]||[]).length;
+modal(`<div class="st">${BK.items.length} MCQ મળ્યા • ${s}</div><div class="sub">દરેકમાં સાચો જવાબ ચકાસો/પસંદ કરો. બાકી જગ્યા: ${room} MCQ</div>${BK.items.map((x,k)=>`<div class="note" style="margin-bottom:10px"><h4>${k+1}. ${esc(x.q)}</h4>${x.o.map((o,n)=>o?`<p>${'ABCD'[n]}) ${esc(o)}</p>`:'').join('')}<div class="row" style="margin-top:6px"><select onchange="BK.items[${k}].a=+this.value" style="flex:1"><option value="-1">સાચો જવાબ?</option>${[0,1,2,3].filter(n=>x.o[n]).map(n=>`<option value="${n}" ${x.a===n?'selected':''}>${'ABCD'[n]}</option>`).join('')}</select><button class="bs" style="background:#dc2626" onclick="BK.items.splice(${k},1);bulkReview()">✕</button></div></div>`).join('')}<button class="btn" onclick="bulkSave()">💾 બધા Save કરો</button><button class="back" style="margin-top:10px" onclick="bulkMcq(${i},0)">← ટેક્સ્ટ સુધારો</button>`)}
+async function bulkSave(){const i=BK.i,s=SUBS[i],K=kk(s),bad=BK.items.findIndex(x=>x.a<0||!x.o[x.a]);
+if(bad>=0)return alert('MCQ '+(bad+1)+' માં સાચો જવાબ પસંદ કરો');
+const room=MAXQ-(S.mcqs[K]||[]).length;if(room<=0)return alert('એક વિષયમાં વધુમાં વધુ '+MAXQ+' MCQ');
+let it=BK.items,msg='';if(it.length>room){it=it.slice(0,room);msg='\nજગ્યા ઓછી હતી, પહેલા '+room+' MCQ જ સેવ થયા.'}
+const arr=it.map(x=>{const o=x.o.map((t,n)=>[t,n]).filter(p=>p[0]);return{q:x.q,o:o.map(p=>p[0]),a:o.findIndex(p=>p[1]===x.a)}});
+try{if(CLOUD){const day=TD(),b=DBF.batch();arr.forEach((x,n)=>b.set(DBF.collection('mcqs').doc(),{day,g:G(),s,q:x.q,o:x.o,a:x.a,ts:Date.now()+n}));await b.commit()}else{(S.mcqs[K]=S.mcqs[K]||[]).push(...arr);save()}}catch(e){return alert('સેવ ન થયું: '+e)}
+BK={};render();closeM();alert('✅ '+arr.length+' MCQ સેવ થયા'+msg)}
+let NS;function addNote(sub){NS=sub;pend=[];modal(`<div class="st">ધોરણ ${G()} • ${NS} – નોટ્સ ઉમેરો</div><div class="fg"><label>ટાઇટલ</label><input id="nt"></div><div class="fg"><label>નોટ્સ (ટાઇપ કરો)</label><textarea id="nb" rows="4"></textarea></div>${ATT}<button class="btn" onclick="saveNote()">Save</button><button class="back" style="margin-top:10px" onclick="closeM()">Cancel</button>`)}
+async function saveNote(){const t=$('nt').value.trim(),b=$('nb').value.trim();if(!t||(!b&&!pend.length))return alert('ટાઇટલ અને નોટ્સ (ટાઇપ અથવા ફાઇલ/ફોટો) ઉમેરો');
+try{const f=await store(pend,'n');const nn={g:G(),s:NS,t,b,f,by:S.user.name,d:new Date().toLocaleDateString('en-GB')};if(CLOUD)await DBF.collection('notes').add({...nn,ts:Date.now()});else{S.notes.unshift(nn);save()}pend=[]}catch(e){return alert('સેવ ન થયું: '+e)}
+closeM();render()}
+let Q,qi,pts,wr;
+function startQuiz(i){const s=SUBS[i],l=S.mcqs[kk(s)]||[];if(!l.length)return ((S.sheets||{})[kk(s)]||[]).length?showSheets(i):alert('હજી MCQ ઉમેર્યા નથી');
+if(S.user.role==='student'&&S.done[S.user.name+kk(s)])return alert('તમે આજે આ ટેસ્ટ આપી દીધી છે');
+Q={s,l};qi=0;pts=0;wr=[];ask()}
+function ask(){if(qi>=Q.l.length){const stu=S.user.role==='student',n=Q.l.length,ok=pts/10;
+if(stu){if(CLOUD){const day=TD();DBF.collection('scores').doc(ID(day+'_'+G()+'_'+S.user.name)).set({day,g:G(),name:S.user.name,pts:firebase.firestore.FieldValue.increment(pts)},{merge:true}).catch(fbErr);DBF.collection('done').doc(ID(day+'_'+S.user.name+'_'+kk(Q.s))).set({day,k:S.user.name+kk(Q.s)}).catch(fbErr)}else{const k=G()+'|'+S.user.name;S.scores[k]=(S.scores[k]||0)+pts;S.done[S.user.name+kk(Q.s)]=1;save()}}
+modal(`<div class="st">🎉 ટેસ્ટ પૂરી – ${Q.s} (ધોરણ ${G()})</div><div class="grid" style="margin:10px 0;text-align:center"><div class="fl" style="background:#dcfce7;cursor:default">✅ સાચા<br><b style="font-size:22px">${ok}</b></div><div class="fl" style="background:#fee2e2;cursor:default">❌ ખોટા<br><b style="font-size:22px">${n-ok}</b></div></div><p style="margin:6px 0 10px;font-weight:700">⭐ પોઈન્ટ: ${pts} / ${n*10}${stu?'':' (Sir માટે સ્કોર સેવ નથી થતો)'}</p>${wr.length?`<div class="st" style="font-size:13px">ખોટા જવાબ અને સાચો જવાબ:</div>`+wr.map((w,k)=>`<div class="note" style="border-left-color:#dc2626"><h4>${k+1}. ${esc(w.q)}</h4><p>❌ તમારો જવાબ: ${esc(w.my)}\n✅ સાચો જવાબ: ${esc(w.ans)}</p></div>`).join(''):'<p>🎉 બધા જવાબ સાચા!</p>'}<button class="btn" style="margin-top:12px" onclick="closeM();render()">બંધ કરો</button>`);return}
+const q=Q.l[qi];modal(`<div class="sub">${Q.s} • ધોરણ ${G()} • ${qi+1}/${Q.l.length}</div><div class="st" style="margin-bottom:12px">${esc(q.q)}</div>${q.o.map((o,k)=>`<button class="qo" onclick="pick(${k},this)">${esc(o)}</button>`).join('')}`)}
+function pick(k,el){const q=Q.l[qi];document.querySelectorAll('.qo').forEach((b,n)=>{b.disabled=true;if(n===q.a)b.style.background='#bbf7d0'});
+if(k===q.a)pts+=10;else{el.style.background='#fecaca';wr.push({q:q.q,my:q.o[k],ans:q.o[q.a]})}setTimeout(()=>{qi++;ask()},900)}
+setInterval(resetCheck,30000);
+if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+resetCheck();if(S.user)start();
+</script></body></html>
